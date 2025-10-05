@@ -371,3 +371,13 @@ Exhibit B - "Incompatible With Secondary Licenses" Notice
 
   This Source Code Form is "Incompatible With Secondary Licenses", as
   defined by the Mozilla Public License, v. 2.0.
+function ChatMessage({ message, canDelete }) {
+  return (
+    <div className="chat-message">
+      <span>{message.text}</span>
+      <button disabled={!canDelete}>Delete</button>
+    </div>
+  );
+}
+
+// Usage: <ChatMessage message={msg} canDelete={false} />
